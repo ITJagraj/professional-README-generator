@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require("path");
 
 //creating a variable and requiring generateMarkdown.js
-var generateMarkdown = require(".util/generateMarkdown");
+var generateMarkdown = require("./utils/generateMarkdown.js");
 const { type } = require('os');
 
 // TODO: Create an array of questions for user input
