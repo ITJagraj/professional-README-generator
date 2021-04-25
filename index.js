@@ -1,6 +1,14 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 
+//creating a variable and using require function to bring in fs to write file 
+const fs = require("fs");
+
+const path = require("path");
+
+//creating a variable and requiring generateMarkdown.js
+var generateMarkdown = require(".util/generateMarkdown");
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -29,7 +37,15 @@ const questions = [
     }
 },
 {
-    
+    type: "input",
+    name: "id",
+    messege: "Please enter the employee's ID",
+    validate: (idInput) => {
+        if(idInput) {
+            return true;
+        }  
+    console.log("Please enter the employee's ID!");
+    return false;  
 }
 ];
 
