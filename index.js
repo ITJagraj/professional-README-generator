@@ -17,9 +17,20 @@ const questions = [
     },
     {
         type: "input",
-        
-    }
+        name: "id",
+        messege: "Please enter the employee's ID",
+        validate: (idInput) => {
+            if(idInput) {
+                return true;
+            }  
+        console.log("Please enter the employee's ID!");
+        return false;
 
+    }
+},
+{
+    
+}
 ];
 
 // TODO: Create a function to write README file
