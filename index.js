@@ -64,6 +64,10 @@ function init() {
             name: "contribution",
             message: "Enter Your Project Contribution Guidelines"
         },
-
+    ])
+        .then((response) => {
+            return fs.writeFileSync(path.join.cwd(), "READ.md"), generate(response));
+});
+}
 // Function call to initialize app
 init();
