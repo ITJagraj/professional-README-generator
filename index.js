@@ -66,7 +66,7 @@ function init() {
         },
     ])
         .then((response) => {
-            return fs.writeFileSync(path.join.cwd(), "READ.md"), generate(response));
+            return fs.writeFileSync(path.join.cwd(), "READ.md"), generate(response);
 });
 }
 // Function call to initialize app
