@@ -13,6 +13,9 @@ contribution
 tests
 contact-information
 
+# Installations
+To generate a readme file, you would need to download the node.js to get it installed in your local computer. Once it is installed in your local computer, you need to execute the npm install first before you start your project.
+
 # Video Link 
 https://drive.google.com/file/d/193cJaBO4pTnm-DRZpCIQdkRThdrJ7aWA/view
 
