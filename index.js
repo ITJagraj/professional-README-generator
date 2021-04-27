@@ -7,15 +7,14 @@ const fs = require("fs");
 const path = require("path");
 
 //creating a variable and requiring generateMarkdown.js
-var generateMarkdown = require("./utils/generateMarkdown.js");
-const { type } = require('os');
+var generate = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     //writing file and syn it using path to join the working dir using the fileName
-    fs.writeFileSync(path.join(process.cwd(), fileName), data);
+  return fs.writeFileSync(path.join(process.cwd(),fileName), data)
 }
 
 // TODO: Create a function to initialize app
@@ -64,10 +63,17 @@ function init() {
             name: "contribution",
             message: "Enter Your Project Contribution Guidelines"
         },
+        {
+            // Takes user text input
+            type: "input",
+            name: "tests",
+            message: "Enter what tests are needed"
+        },
     ])
         .then((response) => {
-            return fs.writeFileSync(path.join.cwd(), "READ.md"), generate(response);
-});
+            console.log(response);
+            writeToFile("READ.md", generate(response));
+        });
 }
 // Function call to initialize app
 init();
