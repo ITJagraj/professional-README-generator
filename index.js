@@ -69,6 +69,13 @@ function init() {
             name: "tests",
             message: "Enter what tests are needed"
         },
+        {
+            // Takes user text input
+            type: "list",
+            name: "license",
+            message: "What license will your project have?",
+            choices: ["MIT", "APACHE", "BSD", "ICS", "NONE"]
+        },
     ])
         .then((response) => {
             console.log(response);
